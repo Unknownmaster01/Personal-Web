@@ -3,17 +3,102 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects</title>
+    <title>My Projects</title>
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <style>
+        /* General Body Styles */
+        body {
+            font-family: 'Press Start 2P', cursive;
+            background-color: #0a0a0a;
+            color: #00ffcc;
+            text-align: center;
+            padding: 50px;
+            margin: 0;
+            overflow-wrap: break-word;
+            word-wrap: break-word;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+        nav a {
+            color: #00ffcc;
+            text-decoration: none;
+            font-size: 14px;
+            padding: 5px 10px;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: #111;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px #00ffcc;
+        }
+        .btn {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 20px;
+            background: #00ffcc;
+            color: #111;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 14px;
+            transition: background 0.3s, color 0.3s;
+        }
+        .btn:hover {
+            background: #008866;
+            color: #fff;
+        }
+
+        /* Styles for Projects */
+        .project-item {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 2px solid #00ffcc;
+        }
+        .project-item:first-child {
+            margin-top: 0;
+            padding-top: 0;
+            border-top: none;
+        }
+        .project-item img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+            border: 2px solid #00ffcc;
+        }
+        .project-item h3 {
+            margin-top: 15px;
+            margin-bottom: 10px;
+        }
+
+        @media (max-width: 768px) {
+            body { padding: 20px; }
+            nav { flex-direction: column; gap: 10px; }
+            .container { width: 90%; padding: 15px; }
+        }
+    </style>
 </head>
 <body>
     <nav>
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
     </nav>
     <div class="container">
-        <h1>NO PROJECT YET</h1>
-    </div>
+        <h1>My Projects</h1>
+
+        <div class="project-item">
+            <img src="img/edufinance.png" alt="Edufinance Project Screenshot">
+            <h3>Edufinance</h3>
+            <p>A web application for managing educational finances. This project was built using PHP and demonstrates user registration and data handling.</p>
+            <a href="http://edufinance.byethost5.com/index.php" class="btn" target="_blank">View Project</a>
+        </div>
+        </div>
 </body>
 </html>
