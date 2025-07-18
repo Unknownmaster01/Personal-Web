@@ -1,51 +1,23 @@
+/* General Body Styles */
 body {
     font-family: 'Press Start 2P', cursive;
     background-color: #0a0a0a;
     color: #00ffcc;
     text-align: center;
-    padding: 20px;
+    padding: 50px;
     margin: 0;
+    /* Prevents text from overflowing its container */
+    overflow-wrap: break-word;
+    word-wrap: break-word; /* Legacy support */
 }
 
-.container {
-    max-width: 800px;
-    margin: 20px auto;
-    background: #111;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 15px #00ffcc;
-}
-
-img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    border: 3px solid #00ffcc;
-    object-fit: cover;
-}
-
-.btn {
-    display: inline-block;
-    margin: 10px;
-    padding: 12px 24px;
-    background: #00ffcc;
-    color: #111;
-    text-decoration: none;
-    border-radius: 5px;
-    font-size: 14px;
-    transition: background-color 0.3s, color 0.3s;
-}
-
-.btn:hover {
-    background: #008866;
-    color: #fff;
-}
-
+/* Navigation Bar Styles */
 nav {
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 15px;
+    justify-content: center; /* Center links horizontally */
+    align-items: center;
+    flex-wrap: wrap; /* Allows links to wrap on medium screens */
+    gap: 20px; /* Space between links */
     margin-bottom: 20px;
 }
 
@@ -56,35 +28,56 @@ nav a {
     padding: 5px 10px;
 }
 
-h1 {
-    font-size: 1.5em;
+/* Main Content Container */
+.container {
+    max-width: 800px;
+    margin: auto;
+    background: #111;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px #00ffcc;
 }
 
-p {
-    font-size: 0.9em;
-    line-height: 1.6;
+/* Profile Image */
+img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid #00ffcc;
 }
 
-/* Responsive adjustments for smaller screens */
+/* Button Styles */
+.btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background: #00ffcc;
+    color: #111;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: background 0.3s, color 0.3s;
+}
+
+.btn:hover {
+    background: #008866;
+    color: #fff;
+}
+
+/* Responsive Design for Mobile (Tablets and Phones) */
 @media (max-width: 768px) {
     body {
-        padding: 15px;
+        padding: 20px;
+    }
+
+    /* Stack navigation links vertically on small screens */
+    nav {
+        flex-direction: column;
+        gap: 10px;
     }
 
     .container {
+        width: 90%;
         padding: 15px;
-    }
-
-    h1 {
-        font-size: 1.2em;
-    }
-
-    p {
-        font-size: 0.8em;
-    }
-
-    .btn {
-        padding: 10px 20px;
-        font-size: 12px;
     }
 }
