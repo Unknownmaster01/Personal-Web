@@ -5,7 +5,69 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Me</title>
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <style>
+        /* General Body Styles */
+        body {
+            font-family: 'Press Start 2P', cursive;
+            background-color: #0a0a0a;
+            color: #00ffcc;
+            text-align: center;
+            padding: 50px;
+            margin: 0;
+            /* Prevents text from overflowing its container */
+            overflow-wrap: break-word;
+            word-wrap: break-word; /* Legacy support */
+        }
+
+        /* Navigation Bar Styles */
+        nav {
+            display: flex;
+            justify-content: center; /* Center links horizontally */
+            align-items: center;
+            flex-wrap: wrap; /* Allows links to wrap on medium screens */
+            gap: 20px; /* Space between links */
+            margin-bottom: 20px;
+        }
+
+        nav a {
+            color: #00ffcc;
+            text-decoration: none;
+            font-size: 14px;
+            padding: 5px 10px;
+        }
+
+        /* Main Content Container */
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: #111;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px #00ffcc;
+        }
+
+        .contact-info p {
+            margin: 15px 0;
+        }
+
+        /* Responsive Design for Mobile (Tablets and Phones) */
+        @media (max-width: 768px) {
+            body {
+                padding: 20px;
+            }
+
+            /* Stack navigation links vertically on small screens */
+            nav {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .container {
+                width: 90%;
+                padding: 15px;
+            }
+        }
+    </style>
 </head>
 <body>
     <nav>
@@ -14,9 +76,11 @@
     </nav>
     <div class="container">
         <h1>Contact Me</h1>
-        <p>Email: jonphilliptaruckoa16@gmail.com</p>
-         <p>Facebook: Zhido Koa</p>
-        <p>Instagram: @itsmezhido</p>
+        <div class="contact-info">
+            <p>Email: jonphilliptaruckoa16@gmail.com</p>
+            <p>Facebook: Zhido Koa</p>
+            <p>Instagram: @itsmezhido</p>
+        </div>
     </div>
 </body>
 </html>
